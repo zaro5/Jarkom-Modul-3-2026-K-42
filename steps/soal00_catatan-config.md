@@ -2,6 +2,56 @@
 
 ## Jichi
 
+```bash
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+    address 192.232.1.1
+    netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+    address 192.232.2.1
+    netmask 255.255.255.0
+
+auto eth3
+iface eth3 inet static
+    address 192.232.3.1
+    netmask 255.255.255.0
+
+auto eth4
+iface eth4 inet static
+    address 192.232.4.1
+    netmask 255.255.255.0
+
+up sysctl -w net.ipv4.ip_forward=1
+up iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+up apt-get update
+up apt-get install -y isc-dhcp-relay
+```
+
+## Tengen
+
+```bash
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+    address 192.232.4.10
+    netmask 255.255.255.0
+    gateway 192.232.4.1
+    up echo -e 'nameserver 192.232.4.1\nnameserver 192.168.122.1\nnameserver 8.8.8.8' > /etc/resolv.conf
+
+up apt-get update
+up apt-get install isc-dhcp-server -y
+```
 
 ## Utahime
 
@@ -19,21 +69,15 @@ iface eth0 inet static
 
 ## Itadori
 
-lama:
-
 ```bash
 auto lo
 iface lo inet loopback
 
 auto eth0
-iface eth0 inet static
-    address 192.232.2.2
-    netmask 255.255.255.0
-    gateway 192.232.2.1
-    up echo -e 'nameserver 192.232.2.1\nnameserver 192.168.122.1\nnameserver 8.8.8.8' > /etc/resolv.conf
+iface eth0 inet dhcp
 ```
 
-baru:
+## Fushiguro
 
 ```bash
 auto lo
@@ -43,22 +87,7 @@ auto eth0
 iface eth0 inet dhcp
 ```
 
-## fushiguro
-
-lama:
-```bash
-auto lo
-iface lo inet loopback
-
-auto eth0
-iface eth0 inet static
-    address 192.232.2.3
-    netmask 255.255.255.0
-    gateway 192.232.2.1
-    up echo -e 'nameserver 192.232.2.1\nnameserver 192.168.122.1\nnameserver 8.8.8.8' > /etc/resolv.conf
-```
-
-baru:
+## Zenin
 
 ```bash
 auto lo
@@ -68,23 +97,7 @@ auto eth0
 iface eth0 inet dhcp
 ```
 
-## zenin
-
-lama:
-
-```bash
-auto lo
-iface lo inet loopback
-
-auto eth0
-iface eth0 inet static
-    address 192.232.2.4
-    netmask 255.255.255.0
-    gateway 192.232.2.1
-    up echo -e 'nameserver 192.232.2.1\nnameserver 192.168.122.1\nnameserver 8.8.8.8' > /etc/resolv.conf
-```
-
-baru:
+## Okkotsu
 
 ```bash
 auto lo
@@ -94,24 +107,7 @@ auto eth0
 iface eth0 inet dhcp
 ```
 
-## okkotsu
-
-lama:
-
-```bash
-auto lo
-iface lo inet loopback
-
-auto eth0
-iface eth0 inet static
-    address 192.232.2.5
-    netmask 255.255.255.0
-    gateway 192.232.2.1
-    up echo -e 'nameserver 192.232.2.1\nnameserver 192.168.122.1\nnameserver 8.8.8.8' > /etc/resolv.conf
-
-```
-
-baru:
+## Ino
 
 ```bash
 auto lo
@@ -121,47 +117,32 @@ auto eth0
 iface eth0 inet dhcp
 ```
 
-## ino
-
-lama:
+## Kusakabe
 
 ```bash
 auto lo
 iface lo inet loopback
 
 auto eth0
-iface eth0 inet static
-    address 192.232.3.2
-    netmask 255.255.255.0
-    gateway 192.232.3.1
-    up echo -e 'nameserver 192.232.3.1\nnameserver 192.168.122.1\nnameserver 8.8.8.8' > /etc/resolv.conf
+iface eth0 inet dhcp
 ```
 
-## kusakabe
-
-lama:
+## Miwa
 
 ```bash
 auto lo
 iface lo inet loopback
 
 auto eth0
-iface eth0 inet static
-    address 192.232.2.3
-    netmask 255.255.255.0
-    gateway 192.232.3.1
-    up echo -e 'nameserver 192.232.3.1\nnameserver 192.168.122.1\nnameserver 8.8.8.8' > /etc/resolv.conf
+iface eth0 inet dhcp
 ```
 
-## miwa
-
-lama:
+## Kugisaki
 
 ```bash
+auto lo
+iface lo inet loopback
+
 auto eth0
-iface eth0 inet static
-    address 192.232.3.5
-    netmask 255.255.255.0
-    gateway 192.232.3.1
-    up echo -e 'nameserver 192.232.3.1\nnameserver 192.168.122.1\nnameserver 8.8.8.8' > /etc/resolv.conf
+iface eth0 inet dhcp
 ```
