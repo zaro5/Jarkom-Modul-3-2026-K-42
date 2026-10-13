@@ -1,8 +1,8 @@
 # Langkah-Langkah
 
-## Arahan
+## Penjelasan Awal
 
-### tengen
+### Tengen
 
 Masukkan alamat MAC ke `/etc/dhcp/dhcpd.conf` dari masing-masing node di Network 2, yakni `itadori`, `fushiguro`, `zenin`, dan `okkotsu`. 
 
@@ -13,6 +13,8 @@ ip a
 Gunakan perintah di atas untuk melakukan pengecekan MAC di masing-masing node.
 
 Dari perintah tersebut, didapat alamat MAC sebagai berikut:
+
+*(Data dari alamat MAC dapat berubah!)*
 
 - itadori
 
@@ -38,7 +40,7 @@ Dari perintah tersebut, didapat alamat MAC sebagai berikut:
 02:42:08:a0:ea:00
 ```
 
-### jichi
+### Jichi
 
 Pada node `jichi`, pastikan dhcp sudah running dengan tanda ACTIVE.
 

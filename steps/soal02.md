@@ -1,6 +1,6 @@
 # Langkah-langkah
 
-## Arahan
+## Penjelasan Awal
 
 ### jichi
 

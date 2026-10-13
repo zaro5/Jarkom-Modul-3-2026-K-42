@@ -1,8 +1,8 @@
 # Langkah-langkah
 
-## Arahan
+## Penjelasan Awal
 
-### tengen
+### Tengen
 
 Pada node `tengen`, masuk ke `/etc/network/interfaces` dan ubah address nya menjadi `192.232.4.10`. Pastikan gateawaynya masih `192.232.4.1`.
 
@@ -14,7 +14,7 @@ systemctl enable isc-dhcp-server
 systemctl status isc-dhcp-server
 ```
 
-### jichi
+### Jichi
 
 Ubah isi `/etc/default/isc/dhcp/relay` di bagian SERVERS menjadi `SERVERS="192.232.4.10".
 

@@ -1,6 +1,6 @@
 # Setup node terlebih dulu
 
-![alt text](/assets/01-struktur.png)
+![alt text](../assets/01-struktur.png)
 
 ## Catatan
 
