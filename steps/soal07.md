@@ -22,11 +22,23 @@ systemctl enable isc-dhcp-server
 systemctl status isc-dhcp-server
 ```
 
+Untuk melakukan pengecekan apakah isi dari MAC Address di `/etc/dhcp/dhcpd.conf` sudah sesuai atau belum, gunakan perintah ini:
+
 ```bash
-ip a
+ip a 
 ```
 
-Gunakan perintah diatas untuk melakukan pengecekan pada masing-masing node.
+### Catatan
+
+Apabila output mengeluarkan `broadcasting discover`, jalankan perintah `stop` di `Tengen`.
+
+![alt text](../assets/07-error-udhcp.png)
+
+```bash
+systemctl stop isc-dhcp-server   # Untuk menghentikan DHCP
+dhcpd -f -d -cf /etc/dhcp/dhcpd.conf   # Untuk menjalankan ulang
+
+## Apabila sudah berhasil, lakukan ctrl + C untuk menghentikan perintah
 
 ## Hasil
 

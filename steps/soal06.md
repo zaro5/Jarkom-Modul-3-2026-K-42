@@ -10,13 +10,18 @@ Pada node `jichi` tidak perlu melakukan perubahan apapun. Cukup pastikan DHCP be
 
 ### Tengen
 
-Pada node `tengen`, masukkan alamat MAC `kugisaki` dan set untuk *static lease* nya.
+Pada node `tengen`, masukkan alamat MAC `kugisaki` dan set untuk *static lease* nya ke dalam file `/etc/dhcp/dhcpd.conf`
+
+```bash
+nano /etc/dhcp/dchpd.conf
+```
 
 ```bash
 # Static Lease / Reservasi VIP untuk Kugisaki
     host kugisaki {
-        hardware ethernet 02:42:80:03:5c:00;
+        hardware ethernet 02:42:80:03:5c:00; # Ini MAC Kugisaki
         fixed-address 192.232.3.99;
+    }
 ```
 
 Pastikan letak *static lease*-nya berada dibawah *long lease*.
