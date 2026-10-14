@@ -39,6 +39,7 @@ systemctl stop isc-dhcp-server   # Untuk menghentikan DHCP
 dhcpd -f -d -cf /etc/dhcp/dhcpd.conf   # Untuk menjalankan ulang
 
 ## Apabila sudah berhasil, lakukan ctrl + C untuk menghentikan perintah
+```
 
 ## Hasil
 

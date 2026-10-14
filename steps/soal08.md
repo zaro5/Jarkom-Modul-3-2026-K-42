@@ -31,11 +31,26 @@ nano /etc/dhcp/dhcpd.conf
 
 ## Set Up
 
-Tidak ada script yang harus dijalankan. Namun cukup jalankan `tcpdump` untuk melakukan pengecekan `DHCPDISCOVER` `DHCPOFFER` `DHCPREQUEST` `DHCPACK`
+Tidak ada script yang harus dijalankan. Namun cukup jalankan `tcpdump` pada `Tengen` untuk melakukan pengecekan `DHCPDISCOVER` `DHCPOFFER` `DHCPREQUEST` `DHCPACK`
 
 ```bash
 tcpdump -i eth0 -vvv -nn port 67 or port 68
 ```
+
+### Catatan
+
+Apabila output mengeluarkan `broadcasting discover`, jalankan perintah `stop` di `Tengen`.
+
+![alt text](../assets/07-error-udhcp.png)
+
+```bash
+systemctl stop isc-dhcp-server   # Untuk menghentikan DHCP
+dhcpd -f -d -cf /etc/dhcp/dhcpd.conf   # Untuk menjalankan ulang
+
+## Apabila sudah berhasil, lakukan ctrl + C untuk menghentikan perintah
+```
+
+Jika `udhcpc` berhasil dijalankan di clinet, nyalakan ulang `tcpdump`.
 
 ## Hasil
 
