@@ -18,7 +18,11 @@ systemctl status isc-dhcp-relay
 
 ### Tengen
 
-Pada node `tengen`, masukkan alamat MAC dari semua node Network 3 (kecuali Kugisaki). Dengan `ino` dan `kusakabe` diberikan *short lease* dan `miwa` diberikan *long lease*.
+Pada node `tengen`, masukkan alamat MAC dari semua node Network 3 (kecuali Kugisaki). Dengan `ino` dan `kusakabe` diberikan *short lease* dan `miwa` diberikan *long lease*. Ambil alamat MAC dengan menggunakan `ip a`.
+
+```bash
+ip a
+```
 
 - **Ino**
 

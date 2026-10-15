@@ -13,7 +13,7 @@ Pada node `jichi` tidak perlu melakukan perubahan apapun. Cukup pastikan DHCP be
 Pada node `tengen`, masukkan alamat MAC `kugisaki` dan set untuk *static lease* nya ke dalam file `/etc/dhcp/dhcpd.conf`
 
 ```bash
-nano /etc/dhcp/dchpd.conf
+nano /etc/dhcp/dhcpd.conf
 ```
 
 ```bash
