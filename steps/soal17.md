@@ -9,7 +9,7 @@ Jalankan script `script_geto.sh` untuk nomor 17 dengan menggunakan:
 ./script_geto.sh 17
 ```
 
-![alt text](/assets/17-scriptgeto.png)
+![alt text](../assets/17-scriptgeto.png)
 
 Disini terlihat script berjalan dengan aman dan sekarang menetapkan "trusted_proxy" sebagai 192.232.1.4 (gojo).
 
@@ -19,24 +19,24 @@ Jalankan script `script_gojo.sh` untuk nomor 17 dengan menggunakan:
 ./script_gojo.sh 17
 ```
 
-![alt text](/assets/17-scriptgojo.png)
+![alt text](../assets/17-scriptgojo.png)
 
 Disini terlihat script berjalan dengan aman dan menetapkan proxy_pass dengan alamat klien geto yang merupakan proxy terpercayanya.
 
 ### Woker API
 Jalankan script `soal17_nanamitodokirara.sh` pada node nanami, todo, dan kirara.
 
-![alt text](/assets/17-scriptnanami.png)
-![alt text](/assets/17-scripttodo.png)
-![alt text](/assets/17-scriptkirara.png)
+![alt text](../assets/17-scriptnanami.png)
+![alt text](../assets/17-scripttodo.png)
+![alt text](../assets/17-scriptkirara.png)
 
 Disini terlihat bahwa di setiap node worker api tersebut, "trusted_proxy" mengembalikan false, dikarenakan node tersebut bukan termasuk proxy yang terpercaya.
 
 ### Verifikasi
 Untuk melakukan verifikasi, kita menjalankan script `soal17_itadoriino.sh` pada node itadori dan ino.
 
-![alt text](/assets/17-scriptitadori.png)
-![alt text](/assets/17-scriptino.png)
+![alt text](../assets/17-scriptitadori.png)
+![alt text](../assets/17-scriptino.png)
 
 Disini terlihat bahwa verifikasi berhasil dikarenakan sudah sesuai dengan harapan, dimana client IP yang tercatat benar yaitu IP dari itadori dan ino (bukan gojo,geto).
 
@@ -47,7 +47,7 @@ mariadb -e "SELECT id, client_ip, request_path, created_at
             WHERE request_path LIKE '/api/uji-ip-%' ORDER BY id DESC LIMIT 20;"
 ```
 
-![alt text](/assets/17-verifikasiyaga.png)
+![alt text](../assets/17-verifikasiyaga.png)
 
 Disini verifikasi benar dikarenakan client_ip merupakan ip dari node itadori dan ino (node klien asal) dan bukan gojo atau geto, serta header palsu diabaikan (bukan 9.9.9.9).
 
@@ -56,7 +56,7 @@ Dan terakhir kita juga bisa memantau log dari geto tersendiri dengan menggunakan
 tail -5 /var/log/nginx/lb_access.log        # kolom real= berisi IP klien asal
 ```
 
-![alt text](/assets/17-loggeto.png)
+![alt text](../assets/17-loggeto.png)
 
 Disini terlihat bahwa di logsnya, kolom real berisi dengan ip klien asal (itadori dan ino).
 

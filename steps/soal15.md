@@ -6,7 +6,7 @@ Pada soal ini, kita disuruh untuk mengkonfigurasikan Nginx pada geto sebagai Loa
 ### Geto
 Jalankan script `soal15_geto.sh`.
 
-![alt text](/assets/15-scriptgeto.png)
+![alt text](../assets/15-scriptgeto.png)
 
 Disini terlihat bahwa script berhasil berjalan. 4 Request menjawab dengan OK dan upstream aktif berjalan.
 
@@ -23,8 +23,8 @@ done | sort | uniq -c
 curl -s -D - -o /dev/null http://192.232.4.2/ | grep -i x-upstream
 ```
 
-![alt text](/assets/15-verifikasiyaga.png)
-![alt text](/assets/15-verifikasiyaga2.png)
+![alt text](../assets/15-verifikasiyaga.png)
+![alt text](../assets/15-verifikasiyaga2.png)
 
 Disini terlihat bahwa rasio berhasil dimana nanami dan todo adalah 3:1 (nanaminanaminanamitodo).
 
@@ -35,7 +35,7 @@ Di Geto:
 awk '{print $3}' /var/log/nginx/lb_access.log | sort | uniq -c
 ```
 
-![alt text](/assets/15-verifikasigeto.png)
+![alt text](../assets/15-verifikasigeto.png)
 
 Disini terlihat bahwa rasio benar 3:1 dan total adalah 40 (walaupun nanami 31, berarti total 41. Tetapi +1 ini berasal dari request lain ke geto maka tetap aman.) berserta source IP log worker.
 

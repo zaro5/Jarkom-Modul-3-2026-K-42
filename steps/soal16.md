@@ -9,7 +9,7 @@ Jalankan script `script_gojo.sh` untuk nomor 16 dengan menjalankan:
 ./script_gojo.sh 16
 ```
 
-![alt text](/assets/16-scriptgojo.png)
+![alt text](../assets/16-scriptgojo.png)
 
 Disini terlihat bahwa script berhasil dijalankan dan kita bisa melihat direktif aktif dan pengujian lokal dari scriptnya yang terjalan dengan aman.
 
@@ -18,8 +18,8 @@ Kita melakukan verifikasi di node itadori dan ino.
 
 Untuk melakukan verifikasi tersebut, kita jalankan script `soal16_itadori.sh` dan `soal16_ino.sh`
 
-![alt text](/assets/16-scriptitadori.png)
-![alt text](/assets/16-scriptino.png)
+![alt text](../assets/16-scriptitadori.png)
+![alt text](../assets/16-scriptino.png)
 
 Disini terlihat bahwa verifikasi berhasil dimana pemanggilan akses web utama (/) dibalas oleh Maki/Panda, sedangkan akses ke /api diteruskan dan dijawab oleh Nanami/Todo sesuai dengan soal.
 
