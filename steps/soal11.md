@@ -14,18 +14,18 @@ ping -c 2 192.232.1.3        # utahime <-> shoko
 ```
 
 Hasil:
-![alt text](/assets/11-pendahuluanutahime.png)
-![alt text](/assets/11-pendahuluanshoko.png)
+![alt text](../assets/11-pendahuluanutahime.png)
+![alt text](../assets/11-pendahuluanshoko.png)
 
 Setelah aman, maka mari kita mulai pengerjaannya.
 
 ### Utahime
 Jalankan script `soal11_utahime.sh` terlebih dahulu. Jika sudah dijalankan dan benar, akan menghasilkan berikut:
-![alt text](/assets/11-utahimeberhasil.png)
+![alt text](../assets/11-utahimeberhasil.png)
 
 ### Shoko
 Jalankan script `soal11_shoko.sh` untuk menjalankan setup slave dan juga sekaligus melakukan transfer zona dan mengecek apakah slave berhasil mengambil dari master. Hasilnya seperti berikut:
-![alt text](/assets/11-shokoberhasil.png)
+![alt text](../assets/11-shokoberhasil.png)
 
 Disini terlihat bahwa slave berhasil mengambil nama zonanya sebagai jujutsu.k42.com dan memperlihatkan bahwa serial zona adalah 401. Setelah itu, juga berhasil terlihat transfer zona yang dilakukan yang terjadi pada `14 Oktober pada pukul 09:00`
 
@@ -43,8 +43,8 @@ dig @127.0.0.1 jujutsu.k42.com SOA +short
 ls -l /var/cache/bind/
 ```
 
-![alt text](/assets/11-utahimenaikserial.png)
-![alt text](/assets/11-shokonaikserial.png)
+![alt text](../assets/11-utahimenaikserial.png)
+![alt text](../assets/11-shokonaikserial.png)
 
 Disini terlihat bahwa serial berhasil melakukan sinkronisasi otomatis dimana saat utahime menaikkan serial zona menjadi 402, shoko juga ikut menaikkan serial menjadi 402.
 
@@ -58,7 +58,7 @@ dig @192.232.1.2 jujutsu.k42.com NS
 dig @192.232.1.3 jujutsu.k42.com NS
 ```
 
-![alt text](/assets/11-queryitadori.png)
+![alt text](../assets/11-queryitadori.png)
 
 Disini terlihat bahwa di node itadori ia berhasil melakukan dig dan menampilkan nama zonanya yaitu jujutsu.k42.com serta nomor serial dari zona tersebut.
 

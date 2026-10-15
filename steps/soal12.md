@@ -5,13 +5,13 @@ Kita diperlukan untuk menambahkan record yang mengarah ke node gojo (sudah pada 
 
 ### Utahime
 Jalankan script `soal12_utahime.sh`
-![alt text](/assets/12-utahimescript.png)
+![alt text](../assets/12-utahimescript.png)
 
 Disini terlihat bahwa verifikasi yang berada di dalam scriptnya menghasilkan jawaban yang benar dan berhasil mengupdate dan membuat reverse dnsnya serta menaikkan forwardernya (google).
 
 ### Shoko
 Jalankan script `soal12_shoko.sh`
-![alt text](/assets/12-shokoscript.png)
+![alt text](../assets/12-shokoscript.png)
 
 Disini terlihat jika slave berhasil menarik dari master.
 
@@ -35,8 +35,8 @@ dig @192.232.1.2 google.com
 ping -c 3 google.com
 ```
 
-![alt text](/assets/12-verifikasiberhasil2.png)
-![alt text](/assets/12-verifikasiberhasil.png)
+![alt text](../assets/12-verifikasiberhasil2.png)
+![alt text](../assets/12-verifikasiberhasil.png)
 
 Kita bisa melihat bahwa dignya menghasilkan CNAME, PTR jujutsu.k42.com, dan dig google.com menghasilkan no error dan berhasil di ping.
 
