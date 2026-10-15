@@ -9,7 +9,7 @@ Pertama kita harus menjalankan konfigurasi gojo dengan menggunakan `script_gojo.
 ./script_gojo.sh 19
 ```
 
-![alt text](/assets/19-scriptgojo.png)
+![alt text](../assets/19-scriptgojo.png)
 
 Disini terlihat script berhasil berjalan dengan penambahan barisan yang mengandung #CACHE dan #RL (rate-limit).
 
@@ -21,8 +21,8 @@ Di Maki dan Panda:
 ./soal19_makipanda.sh
 ```
 
-![alt text](/assets/19-pembuktianmaki.png)
-![alt text](/assets/19-pembuktianpanda.png)
+![alt text](../assets/19-pembuktianmaki.png)
+![alt text](../assets/19-pembuktianpanda.png)
 
 Terlihat bahwa akses request ke halaman web berhasil memenuhi syarat cache menghasilkan status MISS pada akses awal dan HIT pada akses berikutnya.
 
@@ -33,7 +33,7 @@ Di Maki:
 ./soal19_maki2.sh 40
 ```
 
-![alt text](/assets/19-pembuktianrl.png)
+![alt text](../assets/19-pembuktianrl.png)
 
 Disini terlihat bahwa kelebihan request berhasil ditolak dengan status 429 dimana ada 6 request yang diterima (status 200) dan 34 status yang tidak diterima (status 429). Ini berhasil membuktikan rate limiting ke path /api dengan batas 10 request per detik per IP klien.
 
@@ -42,7 +42,7 @@ Dan terakhir, kita perlu mengecek log di gojo dengan menggunakan line yang diber
 grep 'limit=REJECTED' /var/log/nginx/gojo_access.log | tail -10
 ```
 
-![alt text](/assets/19-loggojo.png)
+![alt text](../assets/19-loggojo.png)
 
 Disini terlihat baris yang ditolak memuat status=429, limit=REJECTED, dan up="-" karena request tidak pernah diteruskan ke geto.
 

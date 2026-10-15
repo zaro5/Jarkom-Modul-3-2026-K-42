@@ -11,7 +11,7 @@ ab -V | head -1
 ping -c 1 jujutsu.k42.com
 ```
 
-![alt text](/assets/20-pasangkusakabe.png)
+![alt text](../assets/20-pasangkusakabe.png)
 
 Sekarang Kusakabe siap untuk mulai dikerjakan, maka kita langsung saja masuk.
 
@@ -23,7 +23,7 @@ Pertama, kita memberi penanda log pada Gojo sebelum memulai benchmarking:
 ./soal20_gojo.sh mark
 ```
 
-![alt text](/assets/20-gojomark.png)
+![alt text](../assets/20-gojomark.png)
 
 Mark sudah dibuat, sekarang kita masuk ke kusakabe.
 
@@ -35,7 +35,7 @@ Di Kusakabe:
 ./soal20_kusakabe web baseline
 ```
 
-![alt text](/assets/20-baselinekusakabe.png)
+![alt text](../assets/20-baselinekusakabe.png)
 
 Script berhasil berjalan, berikut kita perlu untuk lanjut di gojo.
 
@@ -44,7 +44,7 @@ Di Gojo:
 ./soal20_gojo.sh summary
 ```
 
-![alt text](/assets/20-summarygojo.png)
+![alt text](../assets/20-summarygojo.png)
 
 Disini terlihat bahwa ringkasan log gojo berhasil terlihat hasil dari ./soal20_kusakabe web baseline yang tercatat ke dalam summarynya.
 
@@ -57,7 +57,7 @@ RATE_LIMIT=off ./script_gojo.sh 19
 ./soal20_gojo.sh mark
 ```
 
-![alt text](/assets/20-gojorloff.png)
+![alt text](../assets/20-gojorloff.png)
 
 Disini terlihat rate-limiting berhasil dimatikan dan berhasil terbuatnya mark baru.
 
@@ -68,14 +68,14 @@ Di Kusakabe:
 
 Jalankan berikut untuk menjalankan script api tanpa limitnya.
 
-![alt text](/assets/20-kusakabenorl.png)
+![alt text](../assets/20-kusakabenorl.png)
 
 Script berhasil berjalan, lalu kita pantau summary dari gojo.
 ```
 ./soal20_gojo.sh summary
 ```
 
-![alt text](/assets/20-summarygojonorl.png)
+![alt text](../assets/20-summarygojonorl.png)
 
 Disini terlihat bahwa tanpa rate-limiting, semua request berhasil diterima dengan waktu yang pendek.
 
@@ -88,7 +88,7 @@ Di Gojo:
 ./soal20_gojo.sh mark
 ```
 
-![alt text](/assets/20-gojorlon.png)
+![alt text](../assets/20-gojorlon.png)
 
 Disini terlihat rate-limiting sekarang hidup, lanjut.
 
@@ -97,14 +97,14 @@ Di Kusakabe:
 ./soal20_kusakabe.sh api dengan-limit
 ```
 
-![alt text](/assets/20-kusakabewithrl.png)
+![alt text](../assets/20-kusakabewithrl.png)
 
 Dan terakhir kita pantau summary dari gojo lagi.
 ```
 ./soal20_gojo.sh summary
 ```
 
-![alt text](/assets/20-summarygojowithrl.png)
+![alt text](../assets/20-summarygojowithrl.png)
 
 Disini terlihat bahwa dari 600 request yang dikirim, hanya 7 saja yang diterima dikarenakan rate-limiting.
 
@@ -116,7 +116,7 @@ Di Kusakabe:
 ./soal20_kusakabe.sh summary
 ```
 
-![alt text](/assets/20-summarybenchmarking.png)
+![alt text](../assets/20-summarybenchmarking.png)
 
 Sekarang kita bisa melihat hasil summary keseluruhan dari semuanya, mulai dari web-baseline, api-tanpa-limit, dan api-dengan-limit.
 

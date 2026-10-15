@@ -10,20 +10,20 @@ ping -c 2 192.232.4.1          # gateway (jichi)
 ping -c 2 192.168.122.1        # akses keluar untuk apt
 ```
 
-![alt text](/assets/13-yagaberhasil.png)
-![alt text](/assets/13-inumakiberhasil.png)
+![alt text](../assets/13-yagaberhasil.png)
+![alt text](../assets/13-inumakiberhasil.png)
 
 Disini terlihat bahwa ping berhasil, maka kita mulai pengerjaannya.
 
 ### Yaga
 Jalankan script `soal13_yaga.sh`.
-![alt text](/assets/13-scriptyaga.png)
+![alt text](../assets/13-scriptyaga.png)
 
 Disini kita bisa melihat tabel request_logs yang berhasil dibuat dan port 3306 yang listen di 0.0.0.0.
 
 ### Inumaki
 Jalankan script `soal13_inumaki.sh`
-![alt text](/assets/13-scriptinumaki.png)
+![alt text](../assets/13-scriptinumaki.png)
 
 Disini kita bisa melihat kedua statusnya mengembalikan YES serta database dan tabel yang sudah muncul di slave.
 
@@ -42,8 +42,8 @@ Di Inumaki
 mariadb -e "SELECT * FROM db_shibuya_K42.request_logs;"
 ```
 
-![alt text](/assets/13-verifikasiyaga.png)
-![alt text](/assets/13-verifikasiinumaki.png)
+![alt text](../assets/13-verifikasiyaga.png)
+![alt text](../assets/13-verifikasiinumaki.png)
 
 Disini terlihat bahwa Inumaki berhasil untuk melakukan replikasi secara realtime yang bisa dilihat lewat pembuatan baris baru di tabel request_logs lewat Yaga yang berhasil di replikasi oleh Inumaki.
 
@@ -59,8 +59,8 @@ mariadb -h 192.232.4.10 -u k42_user -pk42pass -e "SELECT USER(), @@hostname; SHO
 mariadb -h 192.232.4.9 -u k42_user -pk42pass -e "SELECT 1;"
 ```
 
-![alt text](/assets/13-verifikasigeto.png)
-![alt text](/assets/13-verifikasigeto2.png)
+![alt text](../assets/13-verifikasigeto.png)
+![alt text](../assets/13-verifikasigeto2.png)
 
 Disini kita bisa melihat bahwa kita bisa melihat databasenya dan login sukses dari node Network 4 ke Master dan Slave.
 

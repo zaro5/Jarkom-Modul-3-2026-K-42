@@ -6,17 +6,17 @@ Pada soal ini kita diperlukan untuk pasang Nginx dan PHP-FPM pada maki dan panda
 ### Node Worker Web (Maki dan Panda)
 Jalankan script `soal14_makipanda.sh` di node masing-masing.
 
-![alt text](/assets/14-scriptmaki.png)
-![alt text](/assets/14-scriptpanda.png)
+![alt text](../assets/14-scriptmaki.png)
+![alt text](../assets/14-scriptpanda.png)
 
 Disini terlihat bahwa script berhasil terjalan tanpa error.
 
 ### Node Worker API (Nanami, Todo, Kirara)
 Jalankan script `soal14_nanamitodokirara.sh` di node masing-masing.
 
-![alt text](/assets/14-scriptnanami.png)
-![alt text](/assets/14-scripttodo.png)
-![alt text](/assets/14-scriptkirara.png)
+![alt text](../assets/14-scriptnanami.png)
+![alt text](../assets/14-scripttodo.png)
+![alt text](../assets/14-scriptkirara.png)
 
 Disini terlihat bahwa script berhasil terjalan tanpa error.
 
@@ -34,7 +34,7 @@ curl -i -H "Host: jujutsu.k42.com" http://192.232.4.3/           # tetap 403 mes
 curl -i -H "Host: api.jujutsu.k42.com" http://192.232.4.5/       # tetap 403
 ```
 
-![alt text](/assets/14-verifikasiino.png)
+![alt text](../assets/14-verifikasiino.png)
 
 Disini terlihat bahwa semua curl menghasilkan 403 forbidden yang berarti akses langsung dari klien ditolak berhasil.
 
@@ -46,7 +46,7 @@ curl -s -H "Host: jujutsu.k42.com" http://192.232.4.3/
 curl -s -H "Host: jujutsu.k42.com" http://192.232.4.4/
 ```
 
-![alt text](/assets/14-verifikasigojo.png)
+![alt text](../assets/14-verifikasigojo.png)
 
 Disini terlihat bahwa gojo berhasil untuk mengecurl.
 
@@ -57,7 +57,7 @@ curl -s -H "Host: api.jujutsu.k42.com" http://192.232.4.6/uji-geto ; echo
 curl -s -H "Host: api.jujutsu.k42.com" http://192.232.4.7/uji-geto ; echo
 ```
 
-![alt text](/assets/14-verifikasigeto.png)
+![alt text](../assets/14-verifikasigeto.png)
 
 Disini terlihat bahwa geto berhasil mengecurl worker pada api webnya.
 
