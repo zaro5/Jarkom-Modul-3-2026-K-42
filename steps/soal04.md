@@ -64,6 +64,10 @@ Pada file `dhcpd.conf` diatas, dapat dilihat bahwa MAC sudah sesuai dengan MAC m
 
 Apabila layanan DHCP dari `Tengen` dan `Itadori` sudah berstatus ACTIVE, jalankan pengujian pada seluruh client menggunakan `udhcpc`.
 
+```bash
+udhcpc -i eth0
+```
+
 ![alt text](../assets/04-udhcp-itadori.png)
 ![alt text](../assets/04-udhcp-fushi.png)
 ![alt text](../assets/04-udhcp-zenin.png)
